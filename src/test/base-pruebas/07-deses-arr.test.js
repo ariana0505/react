@@ -6,7 +6,7 @@ describe("PRUEBA NUMERO 7", ()=>{
         expect(letras).toBe('ABC')
         expect(numeros).toBe(123)
 
-        expect(typeof letras).toBe('String')
+        expect(typeof letras).toBe('string')
         expect(typeof numeros).toBe('number')
 
         expect(letras).toEqual(expect.any(String))
