@@ -22,8 +22,13 @@ describe("Prueba 09", ()=> {
 
         const id = 100;
         getHeroeByIdAsync(id)
+            .then(hero=>{
+                //estaba experando que nunca existiera
+                expect(hero).toBeFalsy
+                done()
+            })
             .catch(erro=>{
-                expect(erro).toEqual("No se pudo encontrar el héroe")
+                expect(erro).toBe("No se pudo encontrar el héroe")
                 //ESPERA HASTA QUE TERMINE
                 done()
             })
